@@ -1,0 +1,35 @@
+This directory contains example data files of Pharos instrument.
+They are real data files.
+
+There are two data formats for Pharos, the older one does not
+include short detectors, and the newer one does include
+short detectors.
+
+
+-------------------------old data format-------------------------
+
+Pharos_342.nx.h5:  main data
+	data entry: /run_342
+
+
+Pharos_318.nx.h5:  vanadium calibration data
+	data entry: /run_318
+
+
+Pharos_351.nx.h5:  empty can data
+	data entry: /run_351
+
+
+
+-------------------------new data format-------------------------
+
+Pharos_3322.nx.h5:  main data
+	data entry: /run_22
+
+
+Pharos_552.nx.h5:  vanadium calibration data
+	data entry: /run_552
+
+
+Pharos_3325.nx.h5:  empty can data
+	data entry: /run_25
