@@ -33,3 +33,78 @@ Pharos_552.nx.h5:  vanadium calibration data
 
 Pharos_3325.nx.h5:  empty can data
 	data entry: /run_25
+
+
+
+-- detector definition files --
+Detector definition files describe how detectors are laied out
+in the big data array, and it also provide information on
+positions of detectors.
+
+
+Notes about PharosDefinitions.txt on Nov 2006:
+
+In May 2006, Pharos underwent a major reconfiguration. 6atm detectors
+were moved from lower angles to higher angles.  It was believed that
+swapping has happened quite ideally, i.e., higher angle banks are
+swapped with lower angle banks. This lead to the definition file
+PharosDefinitions.txt.May-2006.swap6-10only
+
+Then we were told that there are some strange swappings that make
+things complicated. Attached is the email from Frans Trouw.
+Anyway, currently (Nov 20, 2006) we believe 
+PharosDefinitions.txt.May-2006 is the best version we have.
+
+
+
+Hi Rebecca and Olivier:
+
+We recently discovered that the detector encoding is not correct on Pharos. This was not apparent until we recently carried out a diffraction experiment and we could see discontinuities in the diffraction lines in time and angle. There were a couple of bank based misasignments and some individual errors. I don't yet understand the origin of the single or double detector encoding errors as they are piped to the crates using ribbon cable and you would think that errors would be associated only with swapped banks.
+
+In any case, I have attached a special version of the IDL read in code read_fix_data. The lines that take care of the encoding errors are at the end of the file. Don't be confused by the first part of the "correction" as it merely drops the 16 short detectors located from 24-39. This does make it somewhat confusing because of the shift of 16 in numbering. We usually skip reading in the short detectors as most of the analysis codes do not use them and they are in any case obscured by the mini beamstop.
+
+Let me know if you have any questions, and I apologize for this misconfiguration which has been the present and unchanged since we started up in May of this year after our annual detector calibration.
+
+Frans
+
+
+
+And here is the IDL code that do the swapping:
+; fix for incorrectly encoded detectors during 06
+
+    FOR i = 0,23 DO BEGIN
+      str.big[*,*,i]=big[*,*,i]
+      str.tof[*,i]=tof[*,i]
+      str.pos[*,i]=pos[*,i]
+      str.pulse[*,i]=pulse[*,i]
+    ENDFOR
+
+    FOR i = 24,295 DO BEGIN
+      str.big[*,*,i]=big[*,*,i + 16]
+      str.tof[*,i]=tof[*,i + 16]
+      str.pos[*,i]=pos[*,i + 16]
+      str.pulse[*,*,i]=pulse[*,*,i + 16]
+    ENDFOR
+    FOR i = 296,303 DO BEGIN
+      str.big[*,*,i]=big[*,*,i + 24]
+      str.tof[*,i]=tof[*,i + 24]
+      str.pos[*,i]=pos[*,i + 24]
+      str.pulse[*,*,i]=pulse[*,*,i + 24]
+    ENDFOR
+    FOR i = 304,311 DO BEGIN
+      str.big[*,*,i]=big[*,*,i + 8]
+      str.tof[*,i]=tof[*,i + 8]
+      str.pos[*,i]=pos[*,i + 8]
+      str.pulse[*,*,i]=pulse[*,*,i + 8]
+    ENDFOR
+    FOR i = 312,375 DO BEGIN
+      str.big[*,*,i]=big[*,*,i + 16]
+      str.tof[*,i]=tof[*,i + 16]
+      str.pos[*,i]=pos[*,i + 16]
+      str.pulse[*,*,i]=pulse[*,*,i + 16]
+    ENDFOR
+
+    swap_chan, str, 286, 287
+    swap_chan, str, 305, 306
+    swap_chan, str, 310, 311
+    swap_chan, str, 336, 338
