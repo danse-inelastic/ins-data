@@ -24,9 +24,10 @@ DEST_DIR = .
 EXPORT_DATADIRS = \
     Lrmecs \
     Pharos \
+    simulation \
 
 
-RESOURCE_DEST =  $(EXPORT_MODULEDIR)/$(DEST_DIR)
+RESOURCE_DEST =  $(EXPORT_ROOT)/share/data/$(DEST_DIR)
 
 export:: export-package-data
 
