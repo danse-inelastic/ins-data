@@ -19,15 +19,14 @@ PROJECT = ins-data
 all: export
 #
 
-CP_RF = cp -rf
-DEST_DIR = .
+CP_RF = rsync -a
 EXPORT_DATADIRS = \
     Lrmecs \
     Pharos \
     simulation \
 
 
-RESOURCE_DEST =  $(EXPORT_ROOT)/share/data/$(DEST_DIR)
+RESOURCE_DEST =  $(EXPORT_ROOT)/share/data
 
 export:: export-package-data
 
@@ -35,7 +34,7 @@ export-package-data:: $(EXPORT_DATADIRS)
 	mkdir -p $(RESOURCE_DEST); \
 	for x in $(EXPORT_DATADIRS); do { \
             if [ -d $$x ]; then { \
-	        $(CP_RF) $$x $(RESOURCE_DEST); \
+	        $(CP_RF) $$x/ $(RESOURCE_DEST)/$$x/; \
             } fi; \
         } done
 
