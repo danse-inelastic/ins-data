@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<RunInfo instrument="ARCS" runnumber="297" experiment="2" version="4.1" xmlns="http://neutrons.ornl.gov/SNS/DAS/runinfo_v4_1">
+<DateTime>
+	<StartTime>2008-05-19T11:24:44-04:00</StartTime>
+	<StopTime>2008-05-19T11:45:59-04:00</StopTime>
+	<LastUpdate>2008-05-19T11:45:59-04:00</LastUpdate>
+</DateTime>
+<OperationalInfo>
+	<AcceleratorPulses> 63640 </AcceleratorPulses>
+	<PCurrent units="pC"> 5.106270e+011 </PCurrent>
+	<TotalVetos> 0 </TotalVetos>
+</OperationalInfo>
+<SampleInfo Name="silicon powder" Identifier="NA">
+	<Nature> Solid </Nature>
+</SampleInfo>
+<GeneralInfo>
+	<Title>Mono. vanadium 100meV 600Hz 2837.8us RT</Title>
+	<Notes> </Notes>
+	<ScriptID>none</ScriptID>
+	<RunStatus>stopped</RunStatus>
+	<ExpTitle>Commissioning</ExpTitle>
+</GeneralInfo>
+<DetectorInfo id="180001000">
+	<CalibrationID> 2007071901 </CalibrationID>
+	<MaxScatPixelID> 117760 </MaxScatPixelID> 
+	<MaxBMPixelID> 1 </MaxBMPixelID>
+	<ReportedXDim> 920 </ReportedXDim> 
+	<ReportedYDim> 128 </ReportedYDim>
+	<Scattering id="0" description="Main ARCS Scattering Bank" name="Maindet">
+		<NumPixels>117760,0</NumPixels>
+		<MappingFile> none </MappingFile>
+		<Mode> event </Mode>
+		<NumTimeChannels width="0.0" scale="linear" startbin="0.0" endbin="0.0">1</NumTimeChannels>
+	</Scattering>
+	<BeamMonitorInfo id="1" description="Forward Beam Monitor" name="BEAMMON1">
+		<NumPixels>1,0</NumPixels>
+		<MappingFile> none </MappingFile>
+		<Mode> histogram </Mode>
+		<NumTimeChannels width="1.000000" scale="linear" startbin="0.0" endbin="200001.0">200001</NumTimeChannels>
+	</BeamMonitorInfo>
+</DetectorInfo>
+<ProcessList>
+	<Process id="sampleenv_91020" />
+	<Process id="motors_91031" />
+</ProcessList>
+<FileList>
+	<MetaData>
+		<cvinfo name="ARCS_297_cvinfo.xml" />
+	</MetaData>
+	<DataList>
+		<scattering id="0" name="ARCS_297_neutron_event.dat" />
+		<monitor id="1" name="ARCS_297_bmon_histo.dat" />
+	</DataList>
+	<PulseIdList>
+		<scattering id="0" name="ARCS_297_neutron_event_pulseid.dat" />
+	</PulseIdList>
+</FileList>
+<FileFormats>
+	<scattering id="0" dims="0" vartype="struct,uint32,uint32">
+		<Names>tof,pixelid</Names>
+		<Units>100nsec,none</Units>
+	</scattering>
+	<monitor id="1" dims="200001" vartype="uint32">
+		<Names>tof</Names>
+		<Units>usec</Units>
+	</monitor>
+</FileFormats>
+</RunInfo>
