@@ -1285,7 +1285,7 @@
 
     <LocalGeometer registry-coordinate-system="InstrumentScientist">
         <Register name="moderator" position="(0*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
-        <Register name="monitor0" position="(11.825*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+        <Register name="monitor0" position="(11.831*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
         <Register name="monitor1" position="(18.5*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
         <Register name="sample" position="(13.6*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
         <Register name="detSystem" position="(13.6*m, 0*m, 0*m)" orientation="(-0.0, 0.0, -0.0)"/>

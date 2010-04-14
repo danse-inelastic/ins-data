@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<RunID instrument="ARCS" runnumber="180" experiment="2" version="4.0">
+<Process id="das">
+	<cvsingle name="das.counts" deviceID="dasv1" value="731180055" timestamp="(null)" />
+	<cvsingle name="das.runtime" deviceID="dasv1" value="185.891" timestamp="15:47:37   4/22/2008 EDT" units="Time,S" />
+	<cvsingle name="das.totalvetos" deviceID="dasv1" value="3435973836" timestamp="15:47:37   4/22/2008 EDT" />
+	<cvsingle name="das.totalpulses" deviceID="dasv1" value="1372292" timestamp="15:47:37   4/22/2008 EDT" />
+	<cvsingle name="das.protoncharge" deviceID="dasv1" value="8.425683e+010" timestamp="15:47:37   4/22/2008 EDT" units="E_M,pC" />
+	<cvsingle name="das.monitorcounts" deviceID="dasv1" value="1409268" timestamp="(null)" />
+</Process>
+<Process id="detector">
+	<cvsingle name="Maindet.toftype" deviceID="180001000" value="linear" timestamp="15:47:37   4/22/2008 EDT" />
+	<cvsingle name="Maindet.tofbin" deviceID="180001000" value="0.000000" timestamp="15:47:37   4/22/2008 EDT" units="Time,uS" />
+	<cvsingle name="Maindet.tofstart" deviceID="180001000" value="0.0" timestamp="15:47:37   4/22/2008 EDT" units="Time,uS" />
+	<cvsingle name="Maindet.tofend" deviceID="180001000" value="0.0" timestamp="15:47:37   4/22/2008 EDT" units="Time,uS" />
+	<cvsingle name="Maindet.mode" deviceID="180001000" value="event" timestamp="15:47:37   4/22/2008 EDT" />
+</Process>
+<Process id="chopper_91010">
+<cvsingle name="SpeedRequest1" units="Phase,H" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0.000000" />
+<cvsingle name="SpeedRequest2" units="Phase,H" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0.000000" />
+<cvsingle name="PhaseRequest1" units="Phase,D" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="326.242340" />
+<cvsingle name="PhaseRequest2" units="Phase,D" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="200.598495" />
+<cvsingle name="SpeedAct1" units="Phase,H" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0.000000" />
+<cvsingle name="SpeedAct2" units="Phase,H" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0.000000" />
+<cvsingle name="PhaseAct1" units="Phase,D" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="326.242340" />
+<cvsingle name="PhaseAct2" units="Phase,D" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="200.598495" />
+<cvsingle name="Chopper1State" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0" />
+<cvsingle name="Chopper2State" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0" />
+<cvsingle name="Payload1" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="1" />
+<cvsingle name="Payload2" starttime="2008-04-22T15:44:32.425-04:00" device="ChopperSystem"   value="0" />
+</Process>
+</RunID>
