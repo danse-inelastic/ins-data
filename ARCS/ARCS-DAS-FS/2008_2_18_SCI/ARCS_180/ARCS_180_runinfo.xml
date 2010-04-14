@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<RunInfo instrument="ARCS" runnumber="180" experiment="2" version="4.0">
+<DateTime>
+	<StartTime> 15:44:32   4/22/2008 EDT </StartTime>
+	<LastUpdate> 15:44:32   4/22/2008 EDT </LastUpdate>
+</DateTime>
+<OperationalInfo>
+	<AcceleratorPulses> 1372292 </AcceleratorPulses>
+	<PCurrent units="pC"> 8.425683e+010 </PCurrent>
+	<TotalVetos> 0 </TotalVetos>
+</OperationalInfo>
+<SampleInfo Name="silicon powder" Identifier="NA">
+	<Nature> Solid </Nature>
+</SampleInfo>
+<GeneralInfo>
+	<Title>Vanadium rod, White Beam</Title>
+	<Notes>Vanadium rod, white beam, all detectors at same voltage</Notes>
+	<ScriptID>none</ScriptID>
+	<RunStatus>stopped</RunStatus>
+	<ExpTitle>Commissioning</ExpTitle>
+</GeneralInfo>
+<DetectorInfo id="180001000">
+	<CalibrationID> 2007071901 </CalibrationID>
+	<MaxScatPixelID> 0 </MaxScatPixelID> 
+	<MaxBMPixelID> 0 </MaxBMPixelID>
+	<ReportedXDim> 920 </ReportedXDim> 
+	<ReportedYDim> 128 </ReportedYDim>
+	<Scattering id="0" description="Main ARCS Scattering Bank" name="Maindet">
+		<NumPixels>117760,0</NumPixels>
+		<MappingFile> none </MappingFile>
+		<Mode> event </Mode>
+		<Position> none </Position>
+		<NumTimeChannels width="2.0" scale="linear" startbin="0.0" endbin="20000.0">10001</NumTimeChannels>
+	</Scattering>
+</DetectorInfo>
+<ProcessList>
+	<Process id="chopper_91010" />
+</ProcessList>
+<FileList>
+	<MetaData>
+		<cvinfo name="ARCS_180_cvinfo.xml" />
+	</MetaData>
+	<DataList>
+		<scattering id="0" name="ARCS_180_neutron0_event.dat" />
+	</DataList>
+	<PulseIdList>
+		<scattering id="0" name="ARCS_180_neutron0_event_pulseid.dat" />
+	</PulseIdList>
+</FileList>
+<FileFormats>
+	<scattering id="0" dims="0" vartype="struct,uint32,uint32">
+		<Names>tof,pixelid</Names>
+		<Units>100nsec,none</Units>
+	</scattering>
+</FileFormats>
+</RunInfo>
